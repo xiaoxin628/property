@@ -24,7 +24,7 @@ r_d = {}
 #lib
 def dbConnect():
 		global DB, C
-		DB = MySQLdb.Connect(host="localhost",user='root', passwd="lishuzu511",db="TM_Property",charset="utf8")
+		DB = MySQLdb.Connect(host="localhost",user='xxxx', passwd="xxxx",db="xxxxx",charset="utf8")
 		C = DB.cursor(MySQLdb.cursors.DictCursor)
 
 def fetchLog(logstr):
@@ -119,7 +119,7 @@ def fetchPage(url):
 					if d:
 						suburb_id = d.group(1);
 						count = d.group(2);					
-						query = C.execute("INSERT INTO  stats(suburb_id, count) VALUES(%s, %s)", (suburb_id, count))
+						query = C.execute("INSERT INTO  PP_stats(suburb_id, count) VALUES(%s, %s)", (suburb_id, count))
 						DB.commit()
 
 #main
